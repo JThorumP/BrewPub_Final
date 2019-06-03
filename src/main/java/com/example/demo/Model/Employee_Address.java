@@ -1,3 +1,4 @@
+//Lavet af - JLP
 package com.example.demo.Model;
 
 //Denne klasse er en kombinationsklasse til at håndtere Employee og Address
