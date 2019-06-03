@@ -1,3 +1,4 @@
+//Lavet af -JTP
 package com.example.demo.Model;
 
 //Denne klasse er en kombinationsklasse til at håndtere Roster og Employee
