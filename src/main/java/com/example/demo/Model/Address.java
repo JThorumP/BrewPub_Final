@@ -1,3 +1,4 @@
+// Lavet af - AHH
 package com.example.demo.Model;
 
 import javax.persistence.Entity;
