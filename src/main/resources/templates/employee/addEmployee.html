@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+<h1>Tilføj Ansat</h1>
+<center>
+    <table>
+        <thead>
+        <tr>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+            <th>Tlf. nr.</th>
+            <th>Post nr.</th>
+            <th>By</th>
+            <th>Vej</th>
+            <th>Hus nr.</th>
+            <th2></th2>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <form action="/addEmployee" method="post">
+                <td><input type="text" placeholder="Fornavn" name="first_name"/></td>
+                <td><input type="text" placeholder="Efternavn" name="last_name"/></td>
+                <td><input type="text" placeholder="Tlf. nr." name="phone_number"/></td>
+                <td><input type="text" placeholder="Post nr." name="zip_code"/></td>
+                <td><input type="text" placeholder="By" name="city_name"/></td>
+                <td><input type="text" placeholder="Vej" name="road"/></td>
+                <td><input type="text" placeholder="Hus nr." name="house_number"/></td>
+                <td>
+                    <button class="btn-update" type="submit">Tilføj</button>
+                </td>
+            </form>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <a href="/employee">
+        <button class="btn-bottom">Tilbage</button>
+    </a>
+</center>
+</body>
+</html>

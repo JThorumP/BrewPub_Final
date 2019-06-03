@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+<h1>Opdater Ansat</h1>
+<center>
+    <table>
+        <thead>
+        <tr>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+            <th>Tlf. nr.</th>
+            <th>Post nr.</th>
+            <th>By</th>
+            <th>Vej</th>
+            <th>Hus nr.</th>
+            <th2></th2>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <form action="/updateEmployee" method="post">
+                <input type="hidden" th:value="${employee.id}" name="id"/>
+                <td><input th:value="${employee.first_name}" name="first_name"/></td>
+                <td><input th:value="${employee.last_name}" name="last_name"/></td>
+                <td><input th:value="${employee.phone_number}" name="phone_number"/></td>
+                <input type="hidden" th:value="${address.id}" name="address_id"/>
+                <td><input th:value="${address.zip_code}" name="zip_code"/></td>
+                <td><input th:value="${address.city_name}" name="city_name"/></td>
+                <td><input th:value="${address.road}" name="road"/></td>
+                <td><input th:value="${address.house_number}" name="house_number"/></td>
+                <td>
+                    <button class="btn-update" type="submit">Opdater</button>
+                </td>
+            </form>
+        </tr>
+        </tbody>
+    </table>
+
+<a href="/employee">
+    <button class="btn-bottom">Tilbage</button>
+</a>
+
+</center>
+</body>
+</html>

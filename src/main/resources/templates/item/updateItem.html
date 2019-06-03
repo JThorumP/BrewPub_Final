@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+<h1>Opdater Vare</h1>
+<center>
+    <table>
+        <thead>
+        <tr>
+            <th>Vare navn</th>
+            <th>Katagori</th>
+            <th>Beholdning</th>
+            <th2></th2>
+        </tr>
+        </thead>
+        <tbody>
+            <form action="/updateItem" method="post">
+                <input type="hidden" name="id" th:value="${item.id}"/>
+                <td><input type="text" name="item_name" th:value="${item.item_name}"/></td>
+                <td><input type="text" name="category" th:value="${item.category}"/></td>
+                <td><input type="text" name="amount" th:value="${item.amount}"/></td>
+                <td><button class="btn-update" type="submit">Opdater vare</button></td>
+            </form>
+        </tbody>
+    </table>
+
+    <a href="/item">
+        <button class="btn-bottom">Tilbage</button>
+    </a>
+</center>
+</body>
+</html>

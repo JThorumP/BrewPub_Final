@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+    <h1>Ansatte</h1>
+<center>
+    <a href="/addEmployee">
+        <button class="btn-top">Tilføj ansat</button>
+    </a>
+
+
+    <table>
+    <thead>
+        <tr>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+            <th>Tlf. nr.</th>
+            <th2></th2>
+        </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee:${employees}">
+        <td th:text="${employee.first_name}"/>
+        <td th:text="${employee.last_name}"/>
+        <td th:text="${employee.phone_number}"/>
+        <td>
+            <a th:href="@{'/viewInfo/'+${employee.id}}">
+                <button class="btn-viewInfo">Vis fuld info</button>
+            </a>
+            <a th:href="@{'/updateEmployee/'+${employee.id}}">
+                <button class="btn-update">Opdater</button>
+            </a>
+            <a th:href="@{'/deleteEmployee/'+${employee.id}}">
+                <button class="btn-delete">Slet</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+    <a href="/index">
+        <button class="btn-bottom">Tilbage</button>
+    </a>
+    <a href="/printEmployeeList">
+        <button class="btn-bottom">Vis Liste</button>
+    </a>
+</center>
+</body>
+</html>

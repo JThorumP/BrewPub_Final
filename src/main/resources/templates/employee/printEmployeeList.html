@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCss.css">
+</head>
+<body>
+    <h1>Printervenlig Liste af Ansatte</h1>
+<center>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Fornavn</th>
+            <th>Efternavn</th>
+            <th>Telefonnummer</th>
+            <th>Løn</th>
+            <th>Postnummer</th>
+            <th>By</th>
+            <th>Vej</th>
+            <th>Husnummer</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="employee:${fullList}">
+            <td th:text="${employee.id}"/>
+            <td th:text="${employee.first_name}"/>
+            <td th:text="${employee.last_name}"/>
+            <td th:text="${employee.phone_number}"/>
+            <td th:text="${employee.salery}"/>
+            <td th:text="${employee.zip_code}"/>
+            <td th:text="${employee.city_name}"/>
+            <td th:text="${employee.road}"/>
+            <td th:text="${employee.house_number}"/>
+        </tr>
+    </table>
+
+
+    <a href="/employee">
+        <button class="btn-bottom">Tilbage</button>
+    </a>
+</center>
+</body>
+</html>

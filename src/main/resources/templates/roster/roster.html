@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+<h1>Vagtplan</h1>
+
+<center>
+    <table>
+        <thead>
+            <tr>
+                <th>Fornavn\Dag</th>
+                <th>Mandag</th>
+                <th>Tirsdag</th>
+                <th>Onsdag</th>
+                <th>Torsdag</th>
+                <th>Fredag</th>
+                <th>Lørdag</th>
+                <th>Søndag</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr th:each="roster:${rosters}">
+            <form th:action="@{'/updateRoster/'+${roster.id}}" method="get">
+                <td th:text="${roster.first_name}"/>
+                <td><input th:value="${roster.monday_clock}" name="monday_clock"/>
+                <td><input th:value="${roster.tuesday_clock}" name="tuesday_clock"/></td>
+                <td><input th:value="${roster.wednesday_clock}" name="wednesday_clock"/></td>
+                <td><input th:value="${roster.thursday_clock}" name="thursday_clock"/></td>
+                <td><input th:value="${roster.friday_clock}" name="friday_clock"/></td>
+                <td><input th:value="${roster.saturday_clock}" name="saturday_clock"/></td>
+                <td><input th:value="${roster.sunday_clock}" name="sunday_clock"/></td>
+                <td>
+                    <button class="btn-update" type="submit">Opdater</button>
+                </td>
+            </form>
+        </tr>
+        </tbody>
+    </table>
+
+    <a href="/index">
+        <button class="btn-bottom">Tilbage</button>
+    </a>
+    <a href="/printRoster">
+        <button class="btn-bottom">Vis Liste</button>
+    </a>
+</center>
+
+</body>
+</html>

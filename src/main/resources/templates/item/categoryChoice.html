@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+<h1>Vælg Kategori</h1>
+
+<center>
+
+<table>
+    <thead>
+    <tr>
+        <th>Katagori</th>
+        <th2></th2>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="category:${categories}">
+        <td th:text="${category.category}"/>
+        <td>
+            <a th:href="@{'/showCategory/'+${category.category}}">
+                <button class="btn-viewInfo">Vælg</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<a href="/item">
+    <button class="btn-bottom">Tilbage</button>
+</a>
+</center>
+</body>
+</html>

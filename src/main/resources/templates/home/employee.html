@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub Ansatte</title>
+    <link rel="stylesheet" type="text/css" href="MyCSS.css">
+</head>
+<body>
+<h1>Ansatte</h1>
+
+<a href="/addEmployee">
+    <button class="button" id="btn-addEmployee">Tilføj ansat</button>
+</a>
+
+
+<table>
+    <thead>
+    <tr>
+        <th>Fornavn</th>
+        <th>Efternavn</th>
+        <th>Telefonnummer</th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="employee:${employees}">
+        <td th:text="${employee.first_name}"/>
+        <td th:text="${employee.last_name}"/>
+        <td th:text="${employee.phone_number}"/>
+        <td>
+           <!-- <a th:href="@{'/viewOne/'+${employee.id}}">
+                <button class="btn-viewOne">Vis fuld info</button>
+            </a>
+            <a th:href="@{'/update/'+${employee.id}}}">
+                <button class="btn-update">Opdater</button>
+            </a>-->
+            <a th:href="@{'/delete/'+${employee.id}}">
+                <button class="btn-delete">Slet</button>
+            </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

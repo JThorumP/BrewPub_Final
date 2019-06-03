@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+<h1>Kategori <label th:text="${choice}"/></h1>
+<center>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Vare navn</th>
+        <th>Katagori</th>
+        <th>Beholdning</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item:${category}">
+        <td th:text="${item.id}"/>
+        <td th:text="${item.item_name}"/>
+        <td th:text="${item.category}"/>
+        <td th:text="${item.amount}"/>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/categoryChoice">
+    <button class="btn-bottom">Tilbage</button>
+</a>
+</center>
+</body>
+</html>

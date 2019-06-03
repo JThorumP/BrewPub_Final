@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub Lagerbeholdning</title>
+    <link rel="stylesheet" type="text/css" href="MyCSS.css">
+</head>
+<body>
+<h1>Lagerbeholdning</h1>
+
+<form action="/item" method="post">
+    <label>Skriv varenavn</label>
+    <input type="text" placeholder="Varenavn" name="item_name"/>
+    <label>Skriv Kategori</label>
+    <input type="text" placeholder="Kategori" name="category"/>
+    <label>Beholdning</label>
+    <input type="number" placeholder="Antal varer" name="amount"/>
+    <button class="btn-save" type="submit">Tilføj vare</button>
+</form>
+
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Vare navn</th>
+            <th>Katagori</th>
+            <th>Beholdning</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item:${items}">
+        <td th:text="${item.id}"/>
+        <td th:text="${item.item_name}"/>
+        <td th:text="${item.category}"/>
+        <td th:text="${item.amount}"/>
+        <td>
+            <a th:href="@{'/delete/'+${item.id}}">
+                <button class="btn-delete">Slet</button>
+                </a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

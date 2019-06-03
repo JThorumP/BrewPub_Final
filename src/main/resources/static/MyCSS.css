@@ -1,0 +1,139 @@
+body{
+    background-color: black;
+    background-image: url("Brewpub.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+h1{
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    background-color: darkred;
+    color: white;
+    border: 1px solid black;
+    padding: 4px;
+    text-align: left;
+    width: 75px;
+}
+th2{
+    width: auto;
+}
+td{
+    border: 1px solid black;
+    text-align: left;
+    padding: 4px;
+    width: auto;
+}
+td input{
+    width: 75px;
+}
+tr:nth-child(odd){
+    background-color: white;
+    color: black;
+}
+tr:nth-child(even){
+    background-color: darkred;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+.btn-top {
+    background-color: darkred;
+    border: 2px solid darkred;
+    color: white;
+    padding: 16px 32px;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari og Chrome */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.btn-top:hover{
+    background-color: white;
+    color: black;
+}
+.btn-bottom {
+    display: inline-block;
+    background-color: darkred;
+    border: 2px solid darkred;
+    color: white;
+    padding: 16px 32px;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari og Chrome */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.btn-bottom:hover{
+    background-color: white;
+    color: black;
+}
+.btn-delete{
+    background-color: white;
+    border: 1px solid black;
+    -webkit-transition-duration: 0.4s; /* Safari og Chrome */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.btn-delete:hover{
+    background-color: red;
+    color: white;
+
+}
+.btn-viewInfo{
+    background-color: white;
+    border: 1px solid black;
+    -webkit-transition-duration: 0.4s; /* Safari og Chrome */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-viewInfo:hover{
+    background-color: blue;
+    color: white;
+
+}
+.btn-update{
+    background-color: white;
+    border: 1px solid black;
+    -webkit-transition-duration: 0.4s; /* Safari og Chrome */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+}
+.btn-update:hover{
+    background-color: green;
+    color: white;
+
+}
+.btn-choice{
+    background-color: white;
+    border: 1px solid darkred;
+    -webkit-transition-duration: 0.4s; /* Safari og Chrome */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+
+}
+.btn-choice:hover{
+    background-color: crimson;
+    color: black;
+}

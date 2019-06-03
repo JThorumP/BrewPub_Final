@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tilføj ansat</title>
+</head>
+<body>
+<h1>Tilføj Ansat</h1>
+
+<form action="/addEmployee" method="post">
+    <label style="color: white;">Skriv Fornavn</label>
+    <input type="text" placeholder="Fornavn" name="first_name"/>
+    <label style="color: white;">Skriv Efternavn</label>
+    <input type="text" placeholder="Efternavn" name="last_name"/>
+    <label style="color: white;">Skriv Telefonnummer</label>
+    <input type="text" placeholder="Telefonnummer" name="phone_number"/>
+    <br>
+
+    <label style="color: white;">Skriv Postnummer</label>
+    <input type="text" placeholder="Postnummer" name="zip_code"/>
+    <label style="color: white;">Skriv By</label>
+    <input type="text" placeholder="By" name="city_name"/>
+    <br>
+    <label style="color: white;">Skriv Vejnavn</label>
+    <input type="text" placeholder="Vej navn" name="road"/>
+    <label style="color: white;">Skriv Husnummer</label>
+    <input type="text" placeholder="Husnummer" name="house_number"/>
+    <button class="btn-save" type="submit">Tilføj ansat</button>
+</form>
+
+</body>
+</html>

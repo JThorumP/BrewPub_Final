@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+<h1>Lagerbeholdning</h1>
+<center>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Vare navn</th>
+            <th>Katagori</th>
+            <th>Beholdning</th>
+            <th2></th2>
+        </tr>
+    </thead>
+    <tbody>
+    <tr th:each="item:${items}">
+        <td th:text="${item.id}"/>
+        <td th:text="${item.item_name}"/>
+        <td th:text="${item.category}"/>
+        <td th:text="${item.amount}"/>
+        <td>
+            <a th:href="@{'/updateItem/'+${item.id}}">
+                <button class="btn-update">Opdater</button>
+            </a>
+            <a th:href="@{'/deleteItem/'+${item.id}}">
+                <button class="btn-delete">Slet</button>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <form action="/item" method="post">
+            <td><input type="text" placeholder="Varenavn" name="item_name"/></td>
+            <td><input type="text" placeholder="Kategori" name="category"/></td>
+            <td><input type="number" placeholder="Antal varer" name="amount"/></td>
+            <td><button class="btn-update" type="submit">Tilføj vare</button></td>
+        </form>
+    </tr>
+    </tbody>
+</table>
+    <a href="/index">
+        <button class="btn-bottom">Tilbage</button>
+    </a>
+    <a href="/categoryChoice">
+        <button class="btn-bottom">Vælg Kategori</button>
+    </a>
+</center>
+</body>
+</html>

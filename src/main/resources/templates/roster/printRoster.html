@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>BrewPub</title>
+    <link rel="stylesheet" type="text/css" href="../MyCSS.css">
+</head>
+<body>
+    <h1>Printervenlig udgave af Vagtplanen</h1>
+
+    <center>
+        <table>
+            <thead>
+            <tr>
+                <th>Fornavn\Dag</th>
+                <th>Mandag</th>
+                <th>Tirsdag</th>
+                <th>Onsdag</th>
+                <th>Torsdag</th>
+                <th>Fredag</th>
+                <th>Lørdag</th>
+                <th>Søndag</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="roster:${rosters}">
+                <td th:text="${roster.first_name}"/>
+                <td th:text="${roster.monday_clock}"/>
+                <td th:text="${roster.tuesday_clock}"/>
+                <td th:text="${roster.wednesday_clock}"/>
+                <td th:text="${roster.thursday_clock}"/>
+                <td th:text="${roster.friday_clock}"/>
+                <td th:text="${roster.saturday_clock}"/>
+                <td th:text="${roster.sunday_clock}"/>
+            </tr>
+            </tbody>
+        </table>
+        <br>
+
+    <a href="/roster">
+        <button class="btn-bottom">Tilbage</button>
+    </a>
+</center>
+</body>
+</html>
