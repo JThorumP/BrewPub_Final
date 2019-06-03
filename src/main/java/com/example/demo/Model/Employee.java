@@ -1,3 +1,4 @@
+//Lavet af - JTP
 package com.example.demo.Model;
 
 import javax.persistence.Entity;
