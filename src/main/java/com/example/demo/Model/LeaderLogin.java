@@ -1,3 +1,4 @@
+//Lavet af - JTP
 package com.example.demo.Model;
 
 //Denne klasse skaber et midlertidigt objekt som sættes op mod indtastede ID og password
